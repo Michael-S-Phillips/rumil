@@ -1,0 +1,86 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message": {
+  "publisher": "Geological Society of America",
+  "issue": "10",
+  "short-container-title": [],
+  "published-print": {
+   "date-parts": [
+    [
+     2022,
+     10,
+     1
+    ]
+   ]
+  },
+  "abstract": "<jats:title>Abstract</jats:title><jats:p>Due to its size and observable record of ancient rock, Mars is key to understanding crustal formation.</jats:p>",
+  "DOI": "10.1130/g50341.1",
+  "type": "journal-article",
+  "page": "1182-1186",
+  "title": [
+   "Extensive and ancient feldspathic crust detected across north Hellas rim, Mars: Possible implications for primary crust formation"
+  ],
+  "volume": "50",
+  "author": [
+   {
+    "given": "Michael S.",
+    "family": "Phillips",
+    "sequence": "first"
+   },
+   {
+    "given": "Christina E.",
+    "family": "Viviano",
+    "sequence": "additional"
+   },
+   {
+    "given": "Jeffrey E.",
+    "family": "Moersch",
+    "sequence": "additional"
+   },
+   {
+    "given": "A. Deanne",
+    "family": "Rogers",
+    "sequence": "additional"
+   },
+   {
+    "given": "Harry Y.",
+    "family": "McSween",
+    "sequence": "additional"
+   },
+   {
+    "given": "Frank P.",
+    "family": "Seelos",
+    "sequence": "additional"
+   }
+  ],
+  "published-online": {
+   "date-parts": [
+    [
+     2022,
+     7,
+     11
+    ]
+   ]
+  },
+  "container-title": [
+   "Geology"
+  ],
+  "language": "en",
+  "issued": {
+   "date-parts": [
+    [
+     2022,
+     7,
+     11
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1130/g50341.1",
+  "relation": {},
+  "ISSN": [
+   "0091-7613",
+   "1943-2682"
+  ]
+ }
+}

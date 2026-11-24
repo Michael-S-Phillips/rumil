@@ -1,0 +1,23 @@
+{
+ "ISBN:9780521853712": {
+  "url": "http://openlibrary.org/books/OL24019478M/Planetary_sciences",
+  "title": "Planetary sciences",
+  "authors": [
+   {
+    "name": "Imke De Pater"
+   }
+  ],
+  "number_of_pages": 663,
+  "publishers": [
+   {
+    "name": "Cambridge University Press"
+   }
+  ],
+  "publish_places": [
+   {
+    "name": "New York"
+   }
+  ],
+  "publish_date": "2010"
+ }
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" default-locale="en-US">
+  <!-- Local dependent style: PSJ is an AAS journal and follows the AAS journals reference style. -->
+  <info>
+    <title>The Planetary Science Journal</title>
+    <title-short>PSJ</title-short>
+    <id>http://www.zotero.org/styles/the-planetary-science-journal</id>
+    <link href="http://www.zotero.org/styles/the-planetary-science-journal" rel="self"/>
+    <link href="http://www.zotero.org/styles/the-astrophysical-journal" rel="independent-parent"/>
+    <category citation-format="author-date"/>
+    <category field="science"/>
+    <eissn>2632-3338</eissn>
+    <updated>2026-10-29T00:00:00+00:00</updated>
+    <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
+  </info>
+</style>

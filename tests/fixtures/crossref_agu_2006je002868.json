@@ -1,0 +1,42 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message": {
+  "DOI": "10.1029/2006JE002868",
+  "type": "journal-article",
+  "title": [
+   "Radiative transfer modeling of lunar highlands spectral classes and relationship to lunar samples"
+  ],
+  "author": [
+   {
+    "given": "Joshua T. S.",
+    "family": "Cahill",
+    "sequence": "first"
+   },
+   {
+    "given": "Paul G.",
+    "family": "Lucey",
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Journal of Geophysical Research: Planets"
+  ],
+  "short-container-title": [
+   "J. Geophys. Res."
+  ],
+  "volume": "112",
+  "issue": "E10",
+  "article-number": "2006JE002868",
+  "issued": {
+   "date-parts": [
+    [
+     2007,
+     10
+    ]
+   ]
+  },
+  "publisher": "American Geophysical Union (AGU)",
+  "URL": "https://doi.org/10.1029/2006JE002868"
+ }
+}

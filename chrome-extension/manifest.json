@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Save to Rumil",
+  "version": "0.1.0",
+  "description": "Save the paper you're reading to your Rumil library. Metadata is taken from Crossref, DataCite, or arXiv, not guessed.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Save to Rumil",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:23120/*"
+  ],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+S",
+        "mac": "Command+Shift+S"
+      }
+    }
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1cmpH85AgTV0milIpBg+vHVqY3uLsC0/UpBEXL6RtIuK+MzV1Z7H5PNlSJUtnIzPMti85gMASW6lXWRqXgAxNdMb1wqTafwceI23zm29sj+3ibUrx1xHvrcIKR94uygSc15+6JOW/9KSgr91jG0GL4fuoDp72ZJfyZqOHeADhPdgV+GlKNuuBpG+D3BvDVkEuM5KOhqz3vXahTUSkd4OkeVCDI/rIogA/XRkNhjt4CkiLjnA8MZ1Vppkr2llBLhD4fDXVkk+l5gNSoXEyJVvkaksJRqwfASfCRWmvirm2szcFIyIE1nrITPk7jPnOtPFuVQcxi1QT3EODECAHENYGQIDAQAB"
+}

@@ -1,0 +1,65 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message": {
+  "DOI": "10.1111/j.1945-5100.1998.tb01695.x",
+  "type": "journal-article",
+  "title": [
+   "Scaling impact melting and crater dimensions: Implications for the lunar cratering record"
+  ],
+  "subtitle": [],
+  "author": [
+   {
+    "given": "MARK J.",
+    "family": "CINTALA",
+    "sequence": "first"
+   },
+   {
+    "given": "RICHARD A. F.",
+    "family": "GRIEVE",
+    "sequence": "additional"
+   }
+  ],
+  "container-title": [
+   "Meteoritics &amp; Planetary Science"
+  ],
+  "short-container-title": [
+   "Meteorit &amp; Planetary Scien"
+  ],
+  "volume": "33",
+  "issue": "4",
+  "page": "889-912",
+  "issued": {
+   "date-parts": [
+    [
+     1998,
+     7
+    ]
+   ]
+  },
+  "published-print": {
+   "date-parts": [
+    [
+     1998,
+     7
+    ]
+   ]
+  },
+  "published-online": {
+   "date-parts": [
+    [
+     2010,
+     2,
+     4
+    ]
+   ]
+  },
+  "publisher": "Wiley",
+  "ISSN": [
+   "1086-9379",
+   "1945-5100"
+  ],
+  "URL": "https://doi.org/10.1111/j.1945-5100.1998.tb01695.x",
+  "relation": {}
+ }
+}

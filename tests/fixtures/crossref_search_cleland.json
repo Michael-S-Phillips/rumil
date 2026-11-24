@@ -1,0 +1,37 @@
+{
+ "status": "ok",
+ "message": {
+  "items": [
+   {
+    "DOI": "10.1130/0091-7613(2001)029<0987:hsesat>2.0.co;2",
+    "type": "journal-article",
+    "title": [
+     "Historical science, experimental science, and the scientific method"
+    ],
+    "author": [
+     {
+      "given": "Carol E.",
+      "family": "Cleland",
+      "sequence": "first"
+     }
+    ],
+    "container-title": [
+     "Geology"
+    ],
+    "volume": "29",
+    "issue": "11",
+    "page": "987",
+    "issued": {
+     "date-parts": [
+      [
+       2001
+      ]
+     ]
+    },
+    "publisher": "Geological Society of America",
+    "score": 90.0
+   }
+  ],
+  "total-results": 1
+ }
+}

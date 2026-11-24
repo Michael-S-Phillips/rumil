@@ -1,0 +1,67 @@
+{
+ "status": "ok",
+ "message": {
+  "items": [
+   {
+    "DOI": "10.1038/nature04075",
+    "type": "journal-article",
+    "title": [
+     "Evidence for magmatic evolution and diversity on Mars from infrared observations"
+    ],
+    "author": [
+     {
+      "given": "Philip R.",
+      "family": "Christensen",
+      "sequence": "first"
+     },
+     {
+      "given": "Harry Y.",
+      "family": "McSween",
+      "suffix": "Jr.",
+      "sequence": "additional"
+     },
+     {
+      "given": "Joshua L.",
+      "family": "Bandfield",
+      "sequence": "additional"
+     },
+     {
+      "given": "Steven W.",
+      "family": "Ruff",
+      "sequence": "additional"
+     },
+     {
+      "given": "A. Deanne",
+      "family": "Rogers",
+      "sequence": "additional"
+     }
+    ],
+    "container-title": [
+     "Nature"
+    ],
+    "volume": "436",
+    "issue": "7052",
+    "page": "882",
+    "issued": {
+     "date-parts": [
+      [
+       2005,
+       8,
+       11
+      ]
+     ]
+    },
+    "publisher": "Springer Science and Business Media LLC",
+    "update-to": [
+     {
+      "DOI": "10.1038/nature03639",
+      "type": "correction",
+      "label": "Correction"
+     }
+    ],
+    "score": 80.0
+   }
+  ],
+  "total-results": 1
+ }
+}

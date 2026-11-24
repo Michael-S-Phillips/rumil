@@ -1,0 +1,126 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message": {
+  "total-results": 552921,
+  "items": [
+   {
+    "DOI": "10.1016/j.icarus.2014.11.027",
+    "type": "journal-article",
+    "title": [
+     "Mercury’s global color mosaic: An update from MESSENGER’s orbital observations"
+    ],
+    "author": [
+     {
+      "given": "Deborah L.",
+      "family": "Domingue",
+      "sequence": "first"
+     },
+     {
+      "given": "Scott L.",
+      "family": "Murchie",
+      "sequence": "additional"
+     },
+     {
+      "given": "Brett W.",
+      "family": "Denevi",
+      "sequence": "additional"
+     },
+     {
+      "given": "Carolyn M.",
+      "family": "Ernst",
+      "sequence": "additional"
+     },
+     {
+      "given": "Nancy L.",
+      "family": "Chabot",
+      "sequence": "additional"
+     }
+    ],
+    "container-title": [
+     "Icarus"
+    ],
+    "volume": "257",
+    "page": "477-488",
+    "issued": {
+     "date-parts": [
+      [
+       2015,
+       9
+      ]
+     ]
+    },
+    "score": 71.83976,
+    "ISSN": [
+     "0019-1035"
+    ],
+    "publisher": "Elsevier BV"
+   },
+   {
+    "DOI": "10.1016/j.icarus.2020.113716",
+    "type": "journal-article",
+    "title": [
+     "Global major-element maps of Mercury from four years of MESSENGER X-Ray Spectrometer observations"
+    ],
+    "author": [
+     {
+      "given": "Larry R.",
+      "family": "Nittler",
+      "sequence": "first"
+     }
+    ],
+    "container-title": [
+     "Icarus"
+    ],
+    "volume": "345",
+    "page": "113716",
+    "issued": {
+     "date-parts": [
+      [
+       2020,
+       7
+      ]
+     ]
+    },
+    "score": 39.28484,
+    "ISSN": [
+     "0019-1035"
+    ],
+    "publisher": "Elsevier BV"
+   },
+   {
+    "DOI": "10.1016/j.icarus.2014.10.037",
+    "type": "journal-article",
+    "title": [
+     "Mercury’s seasonal sodium exosphere: MESSENGER orbital observations"
+    ],
+    "author": [
+     {
+      "given": "Timothy A.",
+      "family": "Cassidy",
+      "sequence": "first"
+     }
+    ],
+    "container-title": [
+     "Icarus"
+    ],
+    "volume": "248",
+    "page": "547-559",
+    "issued": {
+     "date-parts": [
+      [
+       2015,
+       3
+      ]
+     ]
+    },
+    "score": 38.884056,
+    "ISSN": [
+     "0019-1035"
+    ],
+    "publisher": "Elsevier BV"
+   }
+  ],
+  "items-per-page": 3
+ }
+}

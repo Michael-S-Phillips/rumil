@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rumil"
+version = "0.3.0"
+description = "A verified citation library for Claude, LaTeX, and Word (imports Zotero)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Michael Phillips" }]
+dependencies = [
+    "mcp>=1.20,<2",
+    "citeproc-py>=0.6",
+    "python-docx>=1.1",
+    "bibtexparser>=1.4,<2",
+    "pypdf>=4",
+    "certifi",
+    "starlette>=0.36",
+    "uvicorn>=0.27",
+]
+
+[project.urls]
+Homepage = "https://github.com/michael-s-phillips/rumil"
+Issues = "https://github.com/michael-s-phillips/rumil/issues"
+Changelog = "https://github.com/michael-s-phillips/rumil/blob/main/CHANGELOG.md"
+
+[project.optional-dependencies]
+test = ["pytest>=7", "httpx"]
+
+[project.scripts]
+rumil = "rumil.cli:main"
+
+[tool.setuptools]
+packages = ["rumil"]
+
+[tool.setuptools.package-data]
+rumil = ["static/*", "styles/*.csl"]

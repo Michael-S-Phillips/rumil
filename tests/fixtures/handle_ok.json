@@ -1,0 +1,14 @@
+{
+ "responseCode": 1,
+ "handle": "10.3390/rs15020314",
+ "values": [
+  {
+   "index": 1,
+   "type": "URL",
+   "data": {
+    "format": "string",
+    "value": "https://www.mdpi.com/2072-4292/15/2/314"
+   }
+  }
+ ]
+}

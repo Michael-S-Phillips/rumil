@@ -1,0 +1,49 @@
+{
+ "data": {
+  "id": "10.5281/zenodo.5789166",
+  "type": "dois",
+  "attributes": {
+   "doi": "10.5281/zenodo.5789166",
+   "creators": [
+    {
+     "name": "Dunn, Tasha L.",
+     "givenName": "Tasha L.",
+     "familyName": "Dunn",
+     "affiliation": [
+      "Colby College"
+     ]
+    }
+   ],
+   "titles": [
+    {
+     "title": "Thermal emission spectra of terrestrial alkaline rocks"
+    }
+   ],
+   "publisher": "Zenodo",
+   "container": {},
+   "publicationYear": 2021,
+   "dates": [
+    {
+     "date": "2021-12-17",
+     "dateType": "Issued"
+    }
+   ],
+   "types": {
+    "ris": "DATA",
+    "bibtex": "misc",
+    "citeproc": "dataset",
+    "schemaOrg": "Dataset",
+    "resourceTypeGeneral": "Dataset"
+   },
+   "version": null,
+   "descriptions": [
+    {
+     "description": "These thermal emission spectra were collected at Arizona State University.",
+     "descriptionType": "Abstract"
+    }
+   ],
+   "url": "https://zenodo.org/record/5789166",
+   "state": "findable"
+  }
+ }
+}

@@ -1,0 +1,5 @@
+{
+ "responseCode": 100,
+ "message": "HANDLE NOT FOUND",
+ "handle": "10.9999/does.not.exist.12345"
+}

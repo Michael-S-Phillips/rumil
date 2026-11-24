@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rumil Library</title>
+<link rel="icon" href="/static/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><img src="/static/icon.svg" alt="" width="22" height="22"><span>Rumil</span></div>
+  <div class="search">
+    <input id="search" type="search" placeholder="Search titles, authors, citekeys, DOIs, notes…  (author:smith year:2022)" autocomplete="off">
+  </div>
+  <div class="actions">
+    <button id="btn-add" class="primary" title="Add by DOI, arXiv, ISBN, PMID, ADS bibcode, or URL">+ Add</button>
+    <button id="btn-verify" title="Verify selected references, or the current view">Verify</button>
+    <button id="btn-import">Import</button>
+    <button id="btn-export">Export</button>
+    <select id="style-select" title="Citation style used for previews and copying"></select>
+    <button id="btn-settings" class="icon" title="Settings" aria-label="Settings">&#9881;</button>
+  </div>
+</header>
+
+<main class="layout">
+  <nav class="sidebar" id="sidebar">
+    <div id="setup-warn" class="setup-warn" hidden></div>
+    <div class="side-section">
+      <div class="side-title">Library</div>
+      <ul class="side-list" id="special-list"></ul>
+    </div>
+    <div class="side-section">
+      <div class="side-title">Collections <button class="mini" id="btn-new-coll" title="New collection">+</button></div>
+      <ul class="tree" id="collection-tree"></ul>
+    </div>
+    <div class="side-section tags-section">
+      <div class="side-title">Tags <input id="tag-filter" placeholder="filter" class="mini-input"></div>
+      <div class="tag-cloud" id="tag-cloud"></div>
+    </div>
+  </nav>
+
+  <section class="list-pane">
+    <div class="list-header">
+      <div id="view-title" class="view-title">All references</div>
+      <div id="view-count" class="muted"></div>
+    </div>
+    <div class="table-wrap" id="table-wrap">
+      <table class="items" id="items-table">
+        <thead>
+          <tr>
+            <th data-sort="status" class="c-status" title="Verification status"></th>
+            <th data-sort="title" class="c-title">Title</th>
+            <th data-sort="creator" class="c-creator">Creator</th>
+            <th data-sort="year" class="c-year">Year</th>
+            <th data-sort="container" class="c-container">Publication</th>
+            <th data-sort="citekey" class="c-key">Citekey</th>
+          </tr>
+        </thead>
+        <tbody id="items-body"></tbody>
+      </table>
+      <div id="dup-view" class="dup-view" hidden></div>
+      <div class="load-more"><button id="btn-more" hidden>Load more</button></div>
+    </div>
+  </section>
+
+  <aside class="detail-pane" id="detail">
+    <div class="empty-detail">
+      <p>Select a reference to see its details, verification, and formatted citation.</p>
+      <p class="muted">Tip: drag references onto a collection to file them.</p>
+    </div>
+  </aside>
+</main>
+
+<div id="toast" class="toast" hidden></div>
+<div id="modal-root"></div>
+<script src="/static/app.js"></script>
+</body>
+</html>
