@@ -1,5 +1,10 @@
 # Changelog
 
+## [Unreleased]
+
+- A registry record with no title (some Crossref records have none) is no longer reported as "metadata mismatch"; the title is noted as unchecked, and "Keep mine" for the title now works instead of failing with "The registry record has no 'title' to differ from".
+- A kept author list now stays kept when the registry's list includes an organisation (for example a GSA record that lists a college as an author); it was flagged again on every verify.
+
 ## [0.3.0] - 2026-11-24
 
 Rumil now lives on GitHub (https://github.com/michael-s-phillips/rumil), so anyone can install and update it.

@@ -203,10 +203,12 @@ class Verifier:
         item = self.lib.require(ref)
         reg = ((item.get("verify_details") or {}).get("registry") or {}).get("csl") or {}
         acc = dict(item.get("accepted") or {})
+        if not reg:
+            raise ValueError("The item has no registry record yet; verify the item first")
         for f in fields:
-            if f not in reg:
-                raise ValueError(f"The registry record has no '{f}' to differ from; verify the item first")
-            acc[f] = reg[f]
+            # A field the registry record lacks (Crossref records with no title, for one) is kept as None:
+            # "the registry has nothing here", so the library's value stands until the registry gains one.
+            acc[f] = reg.get(f)
         self.lib.set_accepted(item["id"], acc)
         if reverify:
             return self.verify_and_store(item["id"])
@@ -473,8 +475,18 @@ class Verifier:
             diffs.append((field_, "", "", issue))
 
         # --- title: near-identical overall (same work), then word-for-word (what gets printed)
-        sim = title_similarity(csl.get("title"), r.get("title"))
-        res.checks.append({"check": "title", "ok": sim >= 0.85, "message": f"similarity {sim:.2f}"})
+        reg_untitled = not strip_markup(r.get("title") or "").strip()
+        if reg_untitled and csl.get("title"):
+            # Some registry records carry no title at all. That says nothing about whether this is the same work,
+            # so the title can't be checked; the DOI, year and authors still are.
+            sim = 1.0
+            res.checks.append({"check": "title", "ok": True, "message": f"the {src} record has no title to compare"})
+            if "title" not in acc:
+                res.issues.append(f"The {src} record has no title, so the library's title can't be checked against it "
+                                  "(keep the library's title to stop this note)")
+        else:
+            sim = title_similarity(csl.get("title"), r.get("title"))
+            res.checks.append({"check": "title", "ok": sim >= 0.85, "message": f"similarity {sim:.2f}"})
         if sim < 0.85:
             problems.append(f"title differs (registry: '{strip_markup(r.get('title'))[:120]}')")
         elif not catalog and r.get("title") and acc.get("title") != r.get("title"):
@@ -493,6 +505,11 @@ class Verifier:
         # --- authors (people only: group names such as 'MERTIS Co-I Team' are often missing on one side)
         la = [_as_person(_split_suffix(n)) for n in creators(csl)]
         ra = [_as_person(n) for n in creators(r)]
+        # A kept author list is stored as the registry gave it; compare it in the same normalized form as `ra`.
+        # Comparing the raw stored list with `ra` never matched when the registry list held an organisation
+        # ('literal') name, so a kept author list was flagged again on every verify.
+        kept = acc.get("author")
+        authors_kept = kept is not None and [_as_person(n) for n in creators({"author": kept})] == ra
         real_la = [n for n in la if not is_etal_name(n)]
         if la and ra:
             first_ok = family_matches(family_of(la[0]), family_of(ra[0]))
@@ -503,7 +520,7 @@ class Verifier:
                                                                   for a, b in zip(lp, rp))) or len(real_la) < len(la))
             swapped = sum(_names_swapped(a, b) for a, b in zip(lp, rp))
             first_only = len(rp) == 1 and len(lp) > 1 and family_matches(family_of(lp[0]), family_of(rp[0]))
-            if not first_ok and not swapped and not catalog and not same_work and not any(
+            if not first_ok and not swapped and not catalog and not same_work and not authors_kept and not any(
                     family_matches(family_of(la[0]), family_of(b)) for b in ra):
                 problems.append(f"first author differs (registry: {family_of(ra[0])})")
             elif truncated and not swapped:
@@ -511,7 +528,7 @@ class Verifier:
                                         "reason": f"Registry lists {len(ra)} authors; library has {len(real_la)}"})
             elif first_only:
                 res.issues.append(f"The {src} record lists only the first author; the library has {len(lp)}")
-            elif not catalog and acc.get("author") != ra and (
+            elif not catalog and not authors_kept and (
                     swapped or len(lp) != len(rp) or any(not _same_family(a, b) for a, b in zip(lp, rp))):
                 i = next((j for j, (a, b) in enumerate(zip(lp, rp))
                           if _names_swapped(a, b) or not _same_family(a, b)), min(len(lp), len(rp)))
@@ -521,7 +538,7 @@ class Verifier:
                 correction("author", ra, why)
             elif not catalog and len(lp) == len(rp):
                 merged, accents, expanded = _name_improvements(real_la, lp, rp)
-                if accents and acc.get("author") != ra:
+                if accents and not authors_kept:
                     shown = "; ".join(f"{a} -> {b}" for a, b in accents[:3]) + (" ..." if len(accents) > 3 else "")
                     junk("author", merged, f"Authors: library names have lost or garbled accents that the {src} record has ({shown})",
                          f"Restore accents from the {src} record")
