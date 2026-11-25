@@ -34,6 +34,10 @@ CROSSREF = {
     "10.1038/nature04075": "crossref_nature04075.json",
     # A SICI-style GSA DOI with '<', '>' and ';' (shaped like Crossref's record, October 2026).
     "10.1130/0091-7613(2001)029<0987:hsesat>2.0.co;2": "crossref_gsa_cleland2001.json",
+    # A record with no title and only the first author (shaped like Crossref's record for Hoblitt et al. 2012, Geosphere).
+    "10.1130/ges00656.1": "crossref_untitled_hoblitt.json",
+    # A GSA abstract whose author list starts with an organisation (shaped like Crossref's record; trimmed authors).
+    "10.1130/abs/2017cd-293045": "crossref_gsa_org_author.json",
 }
 HANDLES_OK = set(CROSSREF) | {"10.5281/zenodo.5789166", "10.48550/arxiv.2208.03533"}
 # Fields Crossref accepts in `select` (from its own validation error); anything else is rejected with HTTP 400.

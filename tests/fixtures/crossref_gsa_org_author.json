@@ -1,0 +1,19 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message": {
+  "DOI": "10.1130/abs/2017CD-293045",
+  "type": "proceedings-article",
+  "title": ["LARGE CHANNEL-FED ROOTLESS VOLCANIC CONE COMPLEX, LAKI, ICELAND"],
+  "subtitle": [],
+  "author": [
+   {"name": "Franklin & Marshall College", "sequence": "first"},
+   {"given": "Andrew P.", "family": "de Wet", "sequence": "additional"},
+   {"given": "Christopher W.", "family": "Hamilton", "sequence": "additional"},
+   {"given": "Stephen", "family": "Scheidt", "sequence": "additional"}
+  ],
+  "container-title": ["Geological Society of America Abstracts with Programs"],
+  "publisher": "Geological Society of America",
+  "issued": {"date-parts": [[2017]]}
+ }
+}
